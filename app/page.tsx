@@ -1,3 +1,6 @@
+import Image from "next/image";
+import amoSparkLogo from "./assets/images/amo_spark.png";
+
 const products = [
   { name: "Multi-Purpose Cleaner", category: "Cleaning", size: "Size placeholder", price: "R --" },
   { name: "Dishwashing Liquid", category: "Cleaning", size: "Size placeholder", price: "R --" },
@@ -8,7 +11,14 @@ const products = [
 ];
 
 function Logo({ footer = false }: { footer?: boolean }) {
-  return <img src="/amo-spark-logo.png" alt="Amo Spark and Scent Solutions" className={footer ? "brand-logo footer-logo" : "brand-logo"} />;
+  return (
+    <Image
+      src={amoSparkLogo}
+      alt="Amo Spark and Scent Solutions"
+      priority={!footer}
+      className={footer ? "brand-logo footer-logo" : "brand-logo"}
+    />
+  );
 }
 
 function ProductImage({ label }: { label: string }) {
