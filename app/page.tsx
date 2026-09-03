@@ -30,8 +30,21 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a href="#top" className="brand" aria-label="Amo Spark home"><Logo /></a>
-        <nav aria-label="Main navigation"><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-        <a href="#shop" className="button button-small">Shop now</a>
+        <nav className="desktop-nav" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+        <a href="#shop" className="button button-small desktop-shop">Shop now</a>
+
+        <details className="mobile-menu">
+          <summary aria-label="Open navigation menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav className="mobile-nav" aria-label="Mobile navigation">
+            <a href="#shop">Shop</a>
+            <a href="#cleaning">Cleaning products</a>
+            <a href="#diffusers">Room diffusers</a>
+            <a href="#about">About</a>
+            <a href="#contact" className="mobile-order">Order / Contact</a>
+          </nav>
+        </details>
       </header>
 
       <section className="hero" id="top">
